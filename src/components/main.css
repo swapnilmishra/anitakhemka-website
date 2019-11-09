@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container-max-width {
+  max-width: 1024px;
+}
+
+.main-content {
+  min-height: calc(100vh - 20px);
+}

@@ -29,7 +29,7 @@ const carouselData = [
   },
   ...rest,
 ]
-const SelftPortraitPage = () => {
+export default () => {
   setNavItem(PageTitles.SelfPortraits)
   return (
     <Layout>
@@ -42,5 +42,3 @@ const SelftPortraitPage = () => {
     </Layout>
   )
 }
-
-export default SelftPortraitPage

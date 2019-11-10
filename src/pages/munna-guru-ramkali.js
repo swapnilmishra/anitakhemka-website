@@ -16,7 +16,8 @@ const carouselData = buildSequencedImages({
   till: 19,
   imageBuilder: imageObjectBuilder,
 })
-const SelftPortraitPage = () => {
+
+export default () => {
   setNavItem(PageTitles.Munna)
   return (
     <Layout>
@@ -29,5 +30,3 @@ const SelftPortraitPage = () => {
     </Layout>
   )
 }
-
-export default SelftPortraitPage

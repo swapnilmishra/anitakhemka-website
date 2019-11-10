@@ -21,7 +21,7 @@ const sidenavItems = [
   { url: "/lakshmi-2007", title: "Lakshmi 2007-12", selected: true },
   { url: "/lakshmi-2013", title: "Lakshmi 2013-19" },
 ]
-const SelftPortraitPage = () => {
+export default () => {
   setNavItem(PageTitles.Lakshmi)
   return (
     <Layout>
@@ -37,5 +37,3 @@ const SelftPortraitPage = () => {
     </Layout>
   )
 }
-
-export default SelftPortraitPage

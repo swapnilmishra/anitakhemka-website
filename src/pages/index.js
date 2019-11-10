@@ -26,7 +26,7 @@ const carouselData = [
   imageObjectBuilder.buildImage({ imgName: "AKHE_A_Verma_27-53.jpg" }),
   imageObjectBuilder.buildImage({ imgName: "AKHE_A1_56_003.jpg" }),
 ]
-const IndexPage = () => {
+export default () => {
   setNavItem(PageTitles.BeingAnita)
   return (
     <Layout>
@@ -39,5 +39,3 @@ const IndexPage = () => {
     </Layout>
   )
 }
-
-export default IndexPage

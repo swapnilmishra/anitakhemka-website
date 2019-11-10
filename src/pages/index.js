@@ -12,7 +12,7 @@ const sidenavItems = [
   { url: "/", title: "Self Portraits" },
 ]
 
-const imageObjectBuilder = new BuildImageObject({ basePath: "Being Anita" })
+const imageObjectBuilder = new BuildImageObject({ basePath: "Being_Anita" })
 
 const carouselData = [
   imageObjectBuilder.buildImage({ imgName: "AKHE_A_Balachandran_48_55.jpg" }),

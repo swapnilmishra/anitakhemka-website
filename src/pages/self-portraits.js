@@ -35,7 +35,7 @@ const SelftPortraitPage = () => {
     <Layout>
       <SEO title="Home" />
       <div className="flex mt-12">
-        <div className="flex-grow w-3/4">
+        <div className="flex-grow w-4/5">
           <ContentCarousel carouselData={carouselData} />
         </div>
       </div>

@@ -33,7 +33,7 @@ const ContentCarousel = ({ carouselData }) => {
 const renderText = ({ text }) => {
   return (
     <div
-      className="text-xs font-light text-gray-600 max-w-md leading-loose tracking-widest p-6"
+      className="text-xs font-light text-gray-600 leading-loose tracking-widest p-6"
       dangerouslySetInnerHTML={{ __html: text }}
     />
   )

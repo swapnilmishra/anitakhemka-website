@@ -8,20 +8,28 @@ import {
   buildSequencedImages,
 } from "../components/utils"
 import { PageTitles } from "../components/consts"
+import SideNav from "../components/sidenav"
 
-const imageObjectBuilder = new BuildImageObject({
-  basePath: "Munna_Guru_Ramkali",
-})
+const imageObjectBuilder = new BuildImageObject({ basePath: "lakshmi_2013_19" })
 const carouselData = buildSequencedImages({
-  till: 19,
+  from: 17,
+  till: 45,
   imageBuilder: imageObjectBuilder,
 })
+const sidenavItems = [
+  { url: "/lakshmi-2003", title: "Lakshmi 2003-06" },
+  { url: "/lakshmi-2007", title: "Lakshmi 2007-12" },
+  { url: "/lakshmi-2013", title: "Lakshmi 2013-19", selected: true },
+]
 const SelftPortraitPage = () => {
-  setNavItem(PageTitles.Munna)
+  setNavItem(PageTitles.Lakshmi)
   return (
     <Layout>
       <SEO title="Home" />
       <div className="flex mt-12">
+        <div className="w-1/5">
+          <SideNav sidenavItems={sidenavItems} />
+        </div>
         <div className="flex-grow w-4/5">
           <ContentCarousel carouselData={carouselData} />
         </div>

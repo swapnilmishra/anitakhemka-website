@@ -1,10 +1,11 @@
 import React from "react"
 
-const ListItem = ({ title, url }) => {
+const ListItem = ({ title, url, selected = false }) => {
+  const selectedClassName = selected ? "font-semibold" : ""
   return (
     <li className="mt-3">
       <a
-        className="text-gray-600 text-xs hover:underline tracking-wider"
+        className={`text-gray-600 text-xs hover:underline tracking-wider ${selectedClassName}`}
         href={url}
       >
         {title}

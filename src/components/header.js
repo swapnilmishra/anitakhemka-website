@@ -9,7 +9,7 @@ import { getCurrentNavItem } from "./utils"
 require("typeface-raleway")
 
 const menuItems = [
-  { url: "/", title: PageTitles.Lakshmi },
+  { url: "/lakshmi-2003", title: PageTitles.Lakshmi },
   { url: "/", title: PageTitles.Kashmir },
   { url: "/self-portraits", title: PageTitles.SelfPortraits },
   { url: "/", title: PageTitles.BeingAnita },
@@ -22,7 +22,7 @@ const menuItems = [
 const Header = ({ siteTitle }) => {
   return (
     <header>
-      <h1 className="text-4xl tracking-wider text-center text-gray-700">
+      <h1 className="text-2xl mt-2 tracking-wide text-center text-gray-700 uppercase">
         <Link to="/">{siteTitle}</Link>
       </h1>
       <TopNav menuItems={menuItems} selectedItem={getCurrentNavItem()} />

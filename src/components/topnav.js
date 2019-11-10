@@ -4,7 +4,7 @@ const MenuItem = ({ selected = false, title, url }) => {
   const selectedItemCls = selected ? "border-b-4 border-gray-400" : ""
   return (
     <a
-      className={`text-xs font-medium tracking-wider uppercase text-gray-600 mt-6 ${selectedItemCls}`}
+      className={`text-sm tracking-wider text-gray-600 mt-6 ${selectedItemCls}`}
       href={url}
     >
       {title}

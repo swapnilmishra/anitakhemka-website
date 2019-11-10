@@ -21,3 +21,7 @@ body {
 .carousel-content-text {
   max-width: 500px;
 }
+
+.BrainhubCarouselItem {
+  align-items: flex-start !important;
+}

@@ -31,8 +31,7 @@ export const getCurrentNavItem = () => {
 export const buildSequencedImages = ({ from = 1, till, imageBuilder }) => {
   const images = []
   let imageNum = from
-  while (imageNum < till) {
-    console.log(imageNum)
+  while (imageNum <= till) {
     images.push(imageBuilder.buildImage({ imgName: `${imageNum}.jpg` }))
     imageNum++
   }

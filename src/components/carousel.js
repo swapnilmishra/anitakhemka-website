@@ -33,7 +33,7 @@ const ContentCarousel = ({ carouselData }) => {
 const renderText = ({ text }) => {
   return (
     <div
-      className="text-xs font-light text-gray-600 leading-loose tracking-widest p-6"
+      className="text-xs font-light text-gray-600 leading-loose tracking-wider p-6"
       dangerouslySetInnerHTML={{ __html: text }}
     />
   )
@@ -43,7 +43,7 @@ const renderImg = ({ img: { src, caption } }) => {
   return (
     <div>
       <img src={src} className="block carousel-image" />
-      {caption && <p className="text-xs text-gray-500 mt-6">{caption}</p>}
+      {caption && <p className="text-xs text-gray-600 mt-6">{caption}</p>}
     </div>
   )
 }

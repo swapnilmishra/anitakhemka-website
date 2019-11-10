@@ -16,7 +16,7 @@ const menuItems = [
   { url: "/munna-guru-ramkali", title: PageTitles.Munna },
   { url: "/", title: PageTitles.Women },
   { url: "/", title: PageTitles.MaternalHealth },
-  { url: "/", title: PageTitles.About },
+  { url: "/about", title: PageTitles.About },
 ]
 
 const Header = ({ siteTitle }) => {

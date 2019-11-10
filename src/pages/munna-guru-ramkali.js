@@ -20,7 +20,7 @@ const SelftPortraitPage = () => {
   setNavItem(PageTitles.Munna)
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Munnu Guru and Ramkali" />
       <div className="flex mt-12">
         <div className="flex-grow w-4/5">
           <ContentCarousel carouselData={carouselData} />

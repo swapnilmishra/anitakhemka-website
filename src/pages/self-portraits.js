@@ -33,7 +33,7 @@ const SelftPortraitPage = () => {
   setNavItem(PageTitles.SelfPortraits)
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Self Portraits" />
       <div className="flex mt-12">
         <div className="flex-grow w-4/5">
           <ContentCarousel carouselData={carouselData} />

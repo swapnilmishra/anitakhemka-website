@@ -30,7 +30,7 @@ const IndexPage = () => {
   setNavItem(PageTitles.BeingAnita)
   return (
     <Layout>
-      <SEO title="Being Anita" />
+      <SEO title="About Me" />
       <div className="flex mt-12">
         <div className="flex-grow w-4/5">
           <ContentCarousel carouselData={carouselData} />

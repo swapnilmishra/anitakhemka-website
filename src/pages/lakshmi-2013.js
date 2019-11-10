@@ -25,7 +25,7 @@ const SelftPortraitPage = () => {
   setNavItem(PageTitles.Lakshmi)
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Lakshmi" />
       <div className="flex mt-12">
         <div className="w-1/5">
           <SideNav sidenavItems={sidenavItems} />

@@ -2,10 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Raleway", sans-serif;
+}
+
 .container-max-width {
   max-width: 1024px;
 }
 
+.carousel-image {
+  max-height: 500px;
+}
+
 .main-content {
   min-height: calc(100vh - 20px);
+}
+
+.carousel-content-text {
+  max-width: 500px;
 }

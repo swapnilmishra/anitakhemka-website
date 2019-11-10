@@ -4,7 +4,7 @@ const ListItem = ({ title, url }) => {
   return (
     <li className="mt-3">
       <a
-        className="text-gray-600 text-xs uppercase hover:underline tracking-wider"
+        className="text-gray-600 text-xs hover:underline tracking-wider"
         href={url}
       >
         {title}

@@ -3,7 +3,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SideNav from "../components/sidenav"
 import ContentCarousel from "../components/carousel"
-import { BuildImageObject } from "../components/utils"
+import { BuildImageObject, setNavItem } from "../components/utils"
+import { PageTitles } from "../components/consts"
 
 const sidenavItems = [
   { url: "/", title: "Lakshmi" },
@@ -32,33 +33,21 @@ const carouselData = [
   imageObjectBuilder.buildImage({ imgName: "AKHE_A_Verma_27-53.jpg" }),
   imageObjectBuilder.buildImage({ imgName: "AKHE_A1_56_003.jpg" }),
 ]
-/**
- * AKHE_A_Bhasin_28_53
- * AKHE_A_Bhola_53_08
- * AKHE_A_Haldar_24-49
- * AKHE_A_Jacob_22-09
- * AKHE_A_jain_29_50
- * AKHE_A_Kathpalia_15-44
- * AKHE_A_Nigam_26B-53
- * AKHE_A_Sharma_33_52
- * AKHE_A_Shrestha_10_07
- * AKHE_A_Thapan_18-53
- * AKHE_A_Trehan_20-54
- * AKHE_A_Verma_27-53
- * AKHE_A1_56_003
- */
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <div className="flex mt-12">
-      <div className="w-1/4">
-        <SideNav sidenavItems={sidenavItems} />
+const IndexPage = () => {
+  setNavItem(PageTitles.BeingAnita)
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div className="flex mt-12">
+        <div className="w-1/4">
+          <SideNav sidenavItems={sidenavItems} />
+        </div>
+        <div className="flex-grow w-3/4">
+          <ContentCarousel carouselData={carouselData} />
+        </div>
       </div>
-      <div className="flex-grow w-3/4">
-        <ContentCarousel carouselData={carouselData} />
-      </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 export default IndexPage

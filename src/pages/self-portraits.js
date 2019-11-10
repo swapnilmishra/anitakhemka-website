@@ -5,13 +5,13 @@ import ContentCarousel from "../components/carousel"
 import {
   BuildImageObject,
   setNavItem,
-  getImagesUsingCount,
+  buildSequencedImages,
 } from "../components/utils"
 import { PageTitles } from "../components/consts"
 
 const imageObjectBuilder = new BuildImageObject({ basePath: "Self_Portraits" })
-const cData = getImagesUsingCount({
-  count: 8,
+const cData = buildSequencedImages({
+  till: 8,
   imageBuilder: imageObjectBuilder,
 })
 const [first, ...rest] = cData

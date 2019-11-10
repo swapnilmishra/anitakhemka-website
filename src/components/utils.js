@@ -27,12 +27,13 @@ export const getCurrentNavItem = () => {
   return Store.getStore({ key: "currentNavItem" })
 }
 
-export const getImagesUsingCount = ({ count, imageBuilder }) => {
+// build image names when the image names are in sequence e.g 1.jpg, 2.jpg
+export const buildSequencedImages = ({ from = 1, till, imageBuilder }) => {
   const images = []
-  let imageNum = 0
-  while (imageNum < count) {
+  let imageNum = from
+  while (imageNum < till) {
     console.log(imageNum)
-    images.push(imageBuilder.buildImage({ imgName: `${imageNum + 1}.jpg` }))
+    images.push(imageBuilder.buildImage({ imgName: `${imageNum}.jpg` }))
     imageNum++
   }
   return images

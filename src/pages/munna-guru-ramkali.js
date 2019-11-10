@@ -5,15 +5,15 @@ import ContentCarousel from "../components/carousel"
 import {
   BuildImageObject,
   setNavItem,
-  getImagesUsingCount,
+  buildSequencedImages,
 } from "../components/utils"
 import { PageTitles } from "../components/consts"
 
 const imageObjectBuilder = new BuildImageObject({
   basePath: "Munna_Guru_Ramkali",
 })
-const carouselData = getImagesUsingCount({
-  count: 19,
+const carouselData = buildSequencedImages({
+  till: 19,
   imageBuilder: imageObjectBuilder,
 })
 const SelftPortraitPage = () => {

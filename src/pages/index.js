@@ -6,12 +6,6 @@ import ContentCarousel from "../components/carousel"
 import { BuildImageObject, setNavItem } from "../components/utils"
 import { PageTitles } from "../components/consts"
 
-const sidenavItems = [
-  { url: "/", title: "Lakshmi" },
-  { url: "/", title: "Kashmir" },
-  { url: "/", title: "Self Portraits" },
-]
-
 const imageObjectBuilder = new BuildImageObject({ basePath: "Being_Anita" })
 
 const carouselData = [
@@ -39,9 +33,6 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <div className="flex mt-12">
-        <div className="w-1/5">
-          <SideNav sidenavItems={sidenavItems} />
-        </div>
         <div className="flex-grow w-4/5">
           <ContentCarousel carouselData={carouselData} />
         </div>

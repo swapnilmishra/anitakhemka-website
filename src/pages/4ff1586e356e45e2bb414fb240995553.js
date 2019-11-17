@@ -30,7 +30,7 @@ export default () => {
       <div className="flex justify-center">
         <a
           className="mt-6 bg-transparent hover:bg-gray-500 text-gray-600 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded"
-          href="/AKHE_A_Bhasin_28_53.jpg.zip"
+          href="/Being_Anita/AKHE_A_Bhasin_28_53.jpg.zip"
           download
         >
           📥 Download the story as zip

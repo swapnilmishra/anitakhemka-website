@@ -40,7 +40,7 @@ export default () => {
     <Layout>
       <SEO title="Being Anita" />
       <div className="flex mt-12 justify-center">
-        <div>
+      <div className="flex-grow w-full">
           <ContentCarousel carouselData={carouselData} />
         </div>
       </div>

@@ -1,8 +1,8 @@
 export const PageTitles = {
-  Lakshmi: "Lakshmi",
+  Laxmi: "Laxmi",
   Kashmir: "Kashmir",
   SelfPortraits: "Self Portraits",
-  BeingAnita: "Being Anita",
+  BeingAnita: "My Name is Anita",
   Munna: "Munna Guru & Ramkali",
   Women: "Woman Living with HIV/AIDS",
   MaternalHealth: "Maternal Health",

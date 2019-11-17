@@ -4,6 +4,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
+  background-color: #eeeeee;
 }
 
 .container-max-width {
@@ -11,17 +12,17 @@ body {
 }
 
 .carousel-image {
-  max-height: 500px;
+  max-height: calc(100vh - 200px);
 }
 
 .main-content {
-  min-height: calc(100vh - 20px);
+  min-height: calc(100vh - 30px);
 }
 
 .carousel-content-text {
   max-width: 500px;
 }
 
-.BrainhubCarouselItem {
-  align-items: flex-start !important;
+.max-width-400 {
+  max-width: 400px;
 }

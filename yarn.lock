@@ -8068,6 +8068,10 @@ node-releases@^1.1.38:
   dependencies:
     semver "^6.3.0"
 
+"nofrills-carousel@https://github.com/swapnilmishra/nofrills-carousel.git":
+  version "0.0.1"
+  resolved "https://github.com/swapnilmishra/nofrills-carousel.git#52eb0dfe310261b25e6e1b4127ecbb3469e7e59f"
+
 noms@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/noms/-/noms-0.0.0.tgz#da8ebd9f3af9d6760919b27d9cdc8092a7332859"

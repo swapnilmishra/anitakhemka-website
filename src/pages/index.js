@@ -10,7 +10,15 @@ const imageObjectBuilder = new BuildImageObject({ basePath: "Being_Anita" })
 const carouselData = [
   imageObjectBuilder.buildImage({ imgName: "AKHE_A_Balachandran_48_55.jpg" }),
   {
-    text: `The images that I make are rooted in my experience as an Indian woman and are a response to the reality around me. Having done self-portraits with the attempt to erase and ease a personal crisis, I sought to find other beings that were named Anita. This time, the attempt was to meet my namesakes and to just see ‘who’ they are. The questions guiding my work remain unchanged: What is Anita?  Who is Anita?  What defines her?  And does it really matter?  After all, Anita is just a name.`,
+    text: `<p class="max-width-400">
+        The images that I make are rooted in my experience as an Indian woman
+        and are a response to the reality around me. Having done self-portraits
+        with the attempt to erase and ease a personal crisis, I sought to find
+        other beings that were named Anita. This time, the attempt was to meet
+        my namesakes and to just see ‘who’ they are. The questions guiding my
+        work remain unchanged: What is Anita? Who is Anita? What defines her?
+        And does it really matter? After all, Anita is just a name.
+      </p>`,
   },
   imageObjectBuilder.buildImage({ imgName: "AKHE_A_Bhasin_28_53.jpg" }),
   imageObjectBuilder.buildImage({ imgName: "AKHE_A_Bhola_53_08.jpg" }),
@@ -31,8 +39,8 @@ export default () => {
   return (
     <Layout>
       <SEO title="Being Anita" />
-      <div className="flex mt-12">
-        <div className="flex-grow w-4/5">
+      <div className="flex mt-12 justify-center">
+      <div className="flex-grow w-full">
           <ContentCarousel carouselData={carouselData} />
         </div>
       </div>

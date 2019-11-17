@@ -9,7 +9,7 @@ import { getCurrentNavItem } from "./utils"
 require("typeface-raleway")
 
 const menuItems = [
-  { url: "/lakshmi-2003", title: PageTitles.Lakshmi },
+  { url: "/lakshmi-2003", title: PageTitles.Laxmi },
   { url: "/", title: PageTitles.Kashmir },
   { url: "/self-portraits", title: PageTitles.SelfPortraits },
   { url: "/", title: PageTitles.BeingAnita },

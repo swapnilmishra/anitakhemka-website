@@ -19,7 +19,6 @@ const carouselData = [
   first,
   {
     text: `
-    Anita Khemka (b.1972)
     <br/>
     Having photographed 'the other' for a decade, I turned the camera on to myself in an attempt to erase and ease a personal crisis that took over my life in 2005. The result has been a series of self-portraits while traveling in different parts of India. During the countless hours spent in trains, cars and at stations, I produced these series of staged images with a view to preserving the various phases of melancholy I was going through. Train journeys afforded certain anonymity and became sites to negotiate my crisis amidst fellow travelers. All this while I had been engaging in the emotional life of the ‘other’. Now I became for the first time the subject of my own camera. It was a different experience, of looking and being looked at.
     
@@ -35,7 +34,7 @@ export default () => {
     <Layout>
       <SEO title="Self Portraits" />
       <div className="flex mt-12">
-        <div className="flex-grow w-4/5">
+        <div className="flex-grow w-full">
           <ContentCarousel carouselData={carouselData} />
         </div>
       </div>

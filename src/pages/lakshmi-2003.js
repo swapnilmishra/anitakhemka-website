@@ -63,15 +63,15 @@ her.
   ...rest,
 ]
 const sidenavItems = [
-  { url: "/lakshmi-2003", title: "Lakshmi 2003-06", selected: true },
-  { url: "/lakshmi-2007", title: "Lakshmi 2007-12" },
-  { url: "/lakshmi-2013", title: "Lakshmi 2013-19" },
+  { url: "/lakshmi-2003", title: "2003-06", selected: true },
+  { url: "/lakshmi-2007", title: "2007-12" },
+  { url: "/lakshmi-2013", title: "2013-19" },
 ]
 export default () => {
-  setNavItem(PageTitles.Lakshmi)
+  setNavItem(PageTitles.Laxmi)
   return (
     <Layout>
-      <SEO title="Lakshmi" />
+      <SEO title={PageTitles.Laxmi} />
       <div className="flex mt-12">
         <div className="w-1/5">
           <SideNav sidenavItems={sidenavItems} />

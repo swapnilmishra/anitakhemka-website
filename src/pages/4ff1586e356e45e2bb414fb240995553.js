@@ -4,7 +4,9 @@ import SEO from "../components/seo"
 import ContentCarousel from "../components/carousel"
 import { BuildImageObject } from "../components/utils"
 
-const imageObjectBuilder = new BuildImageObject({ basePath: "kashmir_for_application_URL" })
+const imageObjectBuilder = new BuildImageObject({
+  basePath: "kashmir_for_application_URL",
+})
 const carouselData = [
   imageObjectBuilder.buildImage({ imgName: "1.X-Ray Portraits.jpg" }),
   imageObjectBuilder.buildImage({ imgName: "2. Identity.jpg" }),
@@ -21,15 +23,23 @@ const carouselData = [
   imageObjectBuilder.buildImage({ imgName: "13. Found.jpg" }),
 ]
 
-
 export default () => {
   return (
     <Layout>
       <SEO title="Coming soon" />
-      <div className="flex mt-12 justify-center">
-      <div className="flex-grow w-full">
-        <ContentCarousel carouselData={carouselData} />
+      <div className="flex justify-center">
+        <a
+          className="mt-6 bg-transparent hover:bg-gray-500 text-gray-600 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded"
+          href="/AKHE_A_Bhasin_28_53.jpg.zip"
+          download
+        >
+          📥 Download the story as zip
+        </a>
       </div>
+      <div className="flex mt-6 justify-center">
+        <div className="flex-grow w-full">
+          <ContentCarousel carouselData={carouselData} />
+        </div>
       </div>
     </Layout>
   )

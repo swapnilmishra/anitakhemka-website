@@ -41,7 +41,6 @@ const renderText = ({ text, key }) => {
 }
 
 const renderImg = ({ img: { src, caption }, key }) => {
-  console.log("key", key)
   return (
     <div key={key}>
       <img src={src} className="block carousel-image" alt={src} />

@@ -42,7 +42,7 @@ const renderText = ({ text }) => {
 const renderImg = ({ img: { src, caption } }) => {
   return (
     <div>
-      <img src={src} className="block carousel-image" />
+      <img src={src} className="block carousel-image" alt={src} />
       {caption && <p className="text-xs text-gray-600 mt-6">{caption}</p>}
     </div>
   )

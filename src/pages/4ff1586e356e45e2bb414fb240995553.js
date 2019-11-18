@@ -33,7 +33,14 @@ export default () => {
           href="/Being_Anita/AKHE_A_Bhasin_28_53.jpg.zip"
           download
         >
-          📥 Download the story as zip
+          <span
+            className="text-xs align-text-top"
+            role="img"
+            aria-label="download"
+          >
+            📥
+          </span>{" "}
+          Download the story as zip
         </a>
       </div>
       <div className="flex mt-6 justify-center">

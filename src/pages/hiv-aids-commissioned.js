@@ -16,10 +16,10 @@ export default () => {
     <Layout>
       <SEO title={PageTitles.Commissioned} />
       <div className="flex mt-12">
-        <div className="w-1/12">
+        <div className="w-2/12">
           <SideNav sidenavItems={sidenavItems} />
         </div>
-        <div className="flex-grow w-11/12"></div>
+        <div className="flex-grow w-10/12"></div>
       </div>
     </Layout>
   )

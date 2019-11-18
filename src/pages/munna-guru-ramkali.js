@@ -23,7 +23,7 @@ export default () => {
     <Layout>
       <SEO title="Munnu Guru and Ramkali" />
       <div className="flex mt-12">
-        <div className="flex-grow w-4/5">
+        <div className="flex-grow w-full">
           <ContentCarousel carouselData={carouselData} />
         </div>
       </div>

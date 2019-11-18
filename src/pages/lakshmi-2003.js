@@ -73,10 +73,10 @@ export default () => {
     <Layout>
       <SEO title={PageTitles.Laxmi} />
       <div className="flex mt-12">
-        <div className="w-1/5">
+        <div className="w-1/12">
           <SideNav sidenavItems={sidenavItems} />
         </div>
-        <div className="flex-grow w-4/5">
+        <div className="flex-grow w-11/12">
           <ContentCarousel carouselData={carouselData} />
         </div>
       </div>

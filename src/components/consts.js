@@ -4,7 +4,8 @@ export const PageTitles = {
   SelfPortraits: "Self Portraits",
   BeingAnita: "My Name is Anita",
   Munna: "Munna Guru & Ramkali",
-  Women: "Woman Living with HIV/AIDS",
+  HivAids: "HIV/AIDS",
   MaternalHealth: "Maternal Health",
+  Commissioned: "Commissioned",
   About: "About",
 }

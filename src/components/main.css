@@ -4,7 +4,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 
 .container-max-width {
@@ -23,6 +23,19 @@ body {
   max-width: 500px;
 }
 
+.text-content {
+  height: calc(100vh - 250px);
+  overflow: scroll;
+}
+
 .max-width-400 {
   max-width: 400px;
+}
+
+.nav-item-text:not(:first-child) {
+  @apply ml-6;
+}
+
+.nav-item-text {
+  font-size: 13px;
 }

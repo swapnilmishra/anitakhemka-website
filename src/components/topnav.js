@@ -3,7 +3,7 @@ import React from "react"
 const MenuItem = ({ selected = false, title, url }) => {
   const selectedItemCls = selected ? "border-b-4 border-gray-400" : ""
   return (
-    <a className={`${selectedItemCls} ml-4`} href={url}>
+    <a className={`${selectedItemCls} nav-item-text`} href={url}>
       {title}
     </a>
   )
@@ -11,7 +11,7 @@ const MenuItem = ({ selected = false, title, url }) => {
 
 const TopNav = ({ menuItems, selectedItem }) => {
   return (
-    <div className="flex flex-wrap text-center justify-start text-sm tracking-wider text-gray-600 mt-6">
+    <div className="flex flex-wrap text-center justify-between text-xs tracking-wider text-gray-600 mt-6">
       {menuItems.map(menuItem => {
         let selected = menuItem.title === selectedItem
         return (

@@ -34,7 +34,7 @@ const renderText = ({ text, key }) => {
   return (
     <div
       key={key}
-      className="text-xs font-light text-gray-600 leading-loose tracking-wider p-6"
+      className="text-xs font-light text-gray-700 leading-loose tracking-wider p-6"
       dangerouslySetInnerHTML={{ __html: text }}
     />
   )

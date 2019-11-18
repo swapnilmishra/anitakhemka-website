@@ -6,13 +6,9 @@ import { PageTitles } from "../components/consts"
 import SideNav from "../components/sidenav"
 
 const sidenavItems = [
-  { url: "/commissioned", title: "JCB Author Portraits" },
-  { url: "/hiv-aids", title: "HIV/AIDS" },
-  {
-    url: "/maternal-health-commissioned",
-    title: "Maternal Health",
-    selected: true,
-  },
+  { url: "/commisioned", title: "JCB Author Portraits" },
+  { url: "/hiv-aids-commissioned", title: "HIV/AIDS", selected: true },
+  { url: "/maternal-health", title: "Maternal Health" },
 ]
 export default () => {
   setNavItem(PageTitles.Commissioned)

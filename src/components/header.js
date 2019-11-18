@@ -9,12 +9,12 @@ import { getCurrentNavItem } from "./utils"
 require("typeface-raleway")
 
 const menuItems = [
-  { url: "/", title: PageTitles.Kashmir },
-  { url: "/lakshmi-2003", title: PageTitles.Laxmi },
+  { url: "/kashmir", title: PageTitles.Kashmir },
+  { url: "/laxmi-2003", title: PageTitles.Laxmi },
   { url: "/self-portraits", title: PageTitles.SelfPortraits },
   { url: "/", title: PageTitles.BeingAnita },
   { url: "/munna-guru-ramkali", title: PageTitles.Munna },
-  { url: "/", title: PageTitles.HivAids },
+  { url: "/hiv-aids", title: PageTitles.HivAids },
   { url: "/commissioned", title: PageTitles.Commissioned },
   { url: "/about", title: PageTitles.About },
 ]

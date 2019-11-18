@@ -5,10 +5,10 @@ import { setNavItem } from "../components/utils"
 import { PageTitles } from "../components/consts"
 
 export default () => {
-  setNavItem(PageTitles.HivAids)
+  setNavItem(PageTitles.Kashmir)
   return (
     <Layout>
-      <SEO title={PageTitles.HivAids} />
+      <SEO title={PageTitles.Kashmir} />
       <div className="flex mt-12">
         <div className="flex-grow w-full"></div>
       </div>

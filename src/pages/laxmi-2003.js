@@ -10,7 +10,7 @@ import {
 import { PageTitles } from "../components/consts"
 import SideNav from "../components/sidenav"
 
-const imageObjectBuilder = new BuildImageObject({ basePath: "lakshmi_2003_06" })
+const imageObjectBuilder = new BuildImageObject({ basePath: "laxmi_2003_06" })
 const cData = buildSequencedImages({
   till: 9,
   imageBuilder: imageObjectBuilder,
@@ -63,9 +63,9 @@ her.
   ...rest,
 ]
 const sidenavItems = [
-  { url: "/lakshmi-2003", title: "2003-06", selected: true },
-  { url: "/lakshmi-2007", title: "2007-12" },
-  { url: "/lakshmi-2013", title: "2013-19" },
+  { url: "/laxmi-2003", title: "2003-06", selected: true },
+  { url: "/laxmi-2007", title: "2007-12" },
+  { url: "/laxmi-2013", title: "2013-19" },
 ]
 export default () => {
   setNavItem(PageTitles.Laxmi)

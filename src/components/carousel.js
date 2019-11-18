@@ -16,12 +16,12 @@ const ContentCarousel = ({ carouselData }) => {
         addArrowClickHandler
         draggable={false}
       >
-        {carouselData.map(carouselItem => {
+        {carouselData.map((carouselItem, idx) => {
           let render = null
           if (carouselItem.img) {
-            render = renderImg(carouselItem)
+            render = renderImg({ ...carouselItem, ...{ key: idx } })
           } else if (carouselItem.text) {
-            render = renderText(carouselItem)
+            render = renderText({ ...carouselItem, ...{ key: idx } })
           }
           return render
         })}
@@ -30,18 +30,20 @@ const ContentCarousel = ({ carouselData }) => {
   )
 }
 
-const renderText = ({ text }) => {
+const renderText = ({ text, key }) => {
   return (
     <div
+      key={key}
       className="text-xs font-light text-gray-600 leading-loose tracking-wider p-6"
       dangerouslySetInnerHTML={{ __html: text }}
     />
   )
 }
 
-const renderImg = ({ img: { src, caption } }) => {
+const renderImg = ({ img: { src, caption }, key }) => {
+  console.log("key", key)
   return (
-    <div>
+    <div key={key}>
       <img src={src} className="block carousel-image" alt={src} />
       {caption && <p className="text-xs text-gray-600 mt-6">{caption}</p>}
     </div>

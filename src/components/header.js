@@ -19,13 +19,16 @@ const menuItems = [
   { url: "/about", title: PageTitles.About },
 ]
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, headerItems }) => {
   return (
     <header>
       <h1 className="text-2xl font-thin mt-2 tracking-wide text-center text-gray-700 uppercase">
         <Link to="/">{siteTitle}</Link>
       </h1>
-      <TopNav menuItems={menuItems} selectedItem={getCurrentNavItem()} />
+      <TopNav
+        menuItems={headerItems || menuItems}
+        selectedItem={getCurrentNavItem()}
+      />
     </header>
   )
 }

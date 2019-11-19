@@ -14,7 +14,6 @@ const menuItems = [
   { url: "/self-portraits", title: PageTitles.SelfPortraits },
   { url: "/", title: PageTitles.BeingAnita },
   { url: "/munna-guru-ramkali", title: PageTitles.Munna },
-  { url: "/hiv-aids", title: PageTitles.HivAids },
   { url: "/commissioned", title: PageTitles.Commissioned },
   { url: "/about", title: PageTitles.About },
 ]

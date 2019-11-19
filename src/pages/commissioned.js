@@ -7,7 +7,7 @@ import SideNav from "../components/sidenav"
 
 const sidenavItems = [
   { url: "/commissioned", title: "JCB Author Portraits", selected: true },
-  { url: "/hiv-aids-commissioned", title: "HIV/AIDS" },
+  { url: "/hiv-aids", title: "HIV/AIDS" },
   { url: "/maternal-health", title: "Maternal Health" },
 ]
 export default () => {

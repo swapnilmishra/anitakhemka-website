@@ -55,11 +55,11 @@ const carouselData = [
 export default () => {
   return (
     <Layout>
-      <SEO title="Submission" />
+      <SEO title="Portfolio Submission" />
       <div className="flex justify-center">
         <a
           className="mt-6 bg-transparent hover:bg-gray-500 text-gray-600 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded"
-          href="/kashmir_for_application.zip"
+          href="/Anita Khemka_Portfolio Submission-20191119T154141Z-001.zip"
           download
         >
           <span

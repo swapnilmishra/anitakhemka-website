@@ -14,7 +14,7 @@ const ContentCarousel = ({ carouselData }) => {
         arrowLeft={<Arrow innerText="<" />}
         arrowRight={<Arrow innerText=">" />}
         addArrowClickHandler
-        draggable={false}
+        draggable={true}
       >
         {carouselData.map((carouselItem, idx) => {
           let render = null

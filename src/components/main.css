@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 body {
+  @apply pl-4 pr-4;
   font-family: "Raleway", sans-serif;
-  background-color: #ffffff;
+  background-color: #eee;
 }
 
 .container-max-width {
@@ -12,20 +13,11 @@ body {
 }
 
 .carousel-image {
-  max-height: calc(100vh - 200px);
+  max-height: calc(100vh - 300px);
 }
 
 .main-content {
   min-height: calc(100vh - 30px);
-}
-
-.carousel-content-text {
-  max-width: 500px;
-}
-
-.text-content {
-  height: calc(100vh - 250px);
-  overflow: scroll;
 }
 
 .max-width-400 {

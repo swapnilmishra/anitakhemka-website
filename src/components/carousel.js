@@ -40,11 +40,19 @@ const renderText = ({ text, key }) => {
   )
 }
 
-const renderImg = ({ img: { src, caption }, key }) => {
+const Caption = ({ text }) => {
+  return (
+    <div className="text-sm font-normal text-gray-900 mt-2 text-right">
+      {text}
+    </div>
+  )
+}
+
+const renderImg = ({ img: { caption, src }, key }) => {
   return (
     <div key={key}>
       <img src={src} className="block carousel-image" alt={src} />
-      {caption && <p className="text-xs text-gray-600 mt-6">{caption}</p>}
+      {caption && <Caption text={caption} />}
     </div>
   )
 }

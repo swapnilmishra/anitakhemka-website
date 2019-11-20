@@ -9,13 +9,13 @@ import { getCurrentNavItem } from "./utils"
 require("typeface-raleway")
 
 const menuItems = [
-  { url: "/kashmir", title: PageTitles.Kashmir },
+  // { url: "/kashmir", title: PageTitles.Kashmir },
   { url: "/laxmi-2003", title: PageTitles.Laxmi },
   { url: "/self-portraits", title: PageTitles.SelfPortraits },
   { url: "/", title: PageTitles.BeingAnita },
   { url: "/munna-guru-ramkali", title: PageTitles.Munna },
   { url: "/commissioned", title: PageTitles.Commissioned },
-  { url: "/about", title: PageTitles.About },
+  // { url: "/about", title: PageTitles.About },
 ]
 
 const Header = ({ siteTitle, headerItems }) => {

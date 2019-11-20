@@ -7,13 +7,11 @@ export class BuildImageObject {
 
   buildImage({ imgName, caption }) {
     let imgObj = {
-      img: {
-        src: `/${this.basePath}/${imgName}`,
-      },
+      img: { src: `/${this.basePath}/${imgName}` },
     }
 
     if (caption) {
-      imgObj = Object.assign(imgObj, { caption })
+      imgObj.img.caption = caption
     }
     return imgObj
   }

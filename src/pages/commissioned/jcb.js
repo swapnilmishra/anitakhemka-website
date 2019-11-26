@@ -29,7 +29,7 @@ const carouselData = [
   }),
   imageObjectBuilder.buildImage({
     imgName: "5. Shekhar.jpg",
-    caption: "Zero Bridge",
+    caption: "Hansda Sowvendra Shekhar",
   }),
 ]
 

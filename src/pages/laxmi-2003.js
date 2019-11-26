@@ -63,8 +63,7 @@ her.
   ...rest,
 ]
 const sidenavItems = [
-  { url: "/laxmi-2003", title: "2003-06", selected: true },
-  { url: "/laxmi-2007", title: "2007-12" },
+  { url: "/laxmi-2003", title: "2003-12", selected: true },
   { url: "/laxmi-2013", title: "2013-19" },
 ]
 export default () => {

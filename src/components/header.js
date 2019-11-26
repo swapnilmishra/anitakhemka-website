@@ -10,7 +10,7 @@ require("typeface-raleway")
 
 const menuItems = [
   // { url: "/kashmir", title: PageTitles.Kashmir },
-  // { url: "/laxmi-2003", title: PageTitles.Laxmi },
+  { url: "/laxmi-2003", title: PageTitles.Laxmi },
   { url: "/self-portraits", title: PageTitles.SelfPortraits },
   { url: "/", title: PageTitles.BeingAnita },
   { url: "/munna-guru-ramkali", title: PageTitles.Munna },

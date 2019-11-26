@@ -14,9 +14,19 @@ const ListItem = ({ title, url, selected = false }) => {
   )
 }
 
-const SideNav = ({ sidenavItems }) => {
+const SideNav = ({ sidenavItems, backBtn = false }) => {
   return (
     <ul className="list-none">
+      {backBtn && (
+        <li>
+          <button
+            className="text-gray-600 text-xs hover:underline tracking-wider cursor-pointer"
+            onClick={() => window.history.back()}
+          >
+            {"< back"}
+          </button>
+        </li>
+      )}
       {sidenavItems.map(navItem => (
         <ListItem {...navItem} />
       ))}

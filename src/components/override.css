@@ -1,13 +1,17 @@
-.BrainhubCarousel__customArrows button {
+.submission .BrainhubCarousel__customArrows button {
   margin-bottom: 125px;
 }
 
-.margin-bottom-125 {
+.submission .margin-bottom-125 {
   margin-bottom: 125px;
 }
 
-.text-content {
+.submission .text-content {
   height: calc(100vh - 250px);
   overflow: scroll;
   @apply w-4/5 m-auto;
+}
+
+.submission .carousel-image {
+  max-height: calc(100vh - 300px);
 }

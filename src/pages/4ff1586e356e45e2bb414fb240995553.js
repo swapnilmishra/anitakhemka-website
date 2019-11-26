@@ -113,7 +113,7 @@ const carouselData = [
 
 export default () => {
   return (
-    <Layout>
+    <Layout rootClass="submission">
       <SEO title="Portfolio Submission" />
       <div className="flex justify-center">
         <a

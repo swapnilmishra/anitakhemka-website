@@ -13,7 +13,7 @@ body {
 }
 
 .carousel-image {
-  max-height: calc(100vh - 300px);
+  max-height: calc(100vh - 220px);
 }
 
 .main-content {

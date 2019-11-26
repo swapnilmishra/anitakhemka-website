@@ -52,8 +52,7 @@ const carouselData = [
   })
 )
 const sidenavItems = [
-  { url: "/laxmi-2003", title: "2003-06" },
-  { url: "/laxmi-2007", title: "2007-12" },
+  { url: "/laxmi-2003", title: "2003-12" },
   { url: "/laxmi-2013", title: "2013-19", selected: true },
 ]
 export default () => {

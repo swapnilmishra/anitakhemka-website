@@ -6,7 +6,7 @@ import { BuildImageObject, setNavItem } from "../components/utils"
 import { PageTitles } from "../components/consts"
 import SideNav from "../components/sidenav"
 
-const imageObjectBuilder = new BuildImageObject({ basePath: "laxmi_2003_06" })
+const imageObjectBuilder = new BuildImageObject({ basePath: "laxmi_2003_12" })
 const cData = [
   "1.jpg",
   "2.jpg",

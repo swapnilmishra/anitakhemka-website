@@ -5,7 +5,7 @@ import ContentCarousel from "../components/carousel"
 import { BuildImageObject, setNavItem } from "../components/utils"
 import { PageTitles } from "../components/consts"
 
-const imageObjectBuilder = new BuildImageObject({ basePath: "Being_Anita" })
+const imageObjectBuilder = new BuildImageObject({ basePath: "being_anita" })
 
 const carouselData = [
   imageObjectBuilder.buildImage({ imgName: "AKHE_A_Balachandran_48_55.jpg" }),
@@ -40,7 +40,7 @@ export default () => {
     <Layout>
       <SEO title="Being Anita" />
       <div className="flex mt-12 justify-center">
-      <div className="flex-grow w-full">
+        <div className="flex-grow w-full">
           <ContentCarousel carouselData={carouselData} />
         </div>
       </div>

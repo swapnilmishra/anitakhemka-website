@@ -6,7 +6,7 @@ import { BuildImageObject, setNavItem } from "../components/utils"
 import { PageTitles } from "../components/consts"
 
 const imageObjectBuilder = new BuildImageObject({
-  basePath: "Munna_Guru_Ramkali",
+  basePath: "munna_guru_ramkali",
 })
 const carouselData = [
   "1 copy.jpg",

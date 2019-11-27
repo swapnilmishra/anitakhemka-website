@@ -7,7 +7,7 @@ import SideNav from "../../components/sidenav"
 import ContentCarousel from "../../components/carousel"
 
 const imageObjectBuilder = new BuildImageObject({
-  basePath: "3. JCB Author Portraits",
+  basePath: "jcb_author_portraits",
 })
 
 const carouselData = [

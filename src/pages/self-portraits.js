@@ -2,18 +2,25 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ContentCarousel from "../components/carousel"
-import {
-  BuildImageObject,
-  setNavItem,
-  buildSequencedImages,
-} from "../components/utils"
+import { BuildImageObject, setNavItem } from "../components/utils"
 import { PageTitles } from "../components/consts"
 
-const imageObjectBuilder = new BuildImageObject({ basePath: "Self_Portraits" })
-const cData = buildSequencedImages({
-  till: 8,
-  imageBuilder: imageObjectBuilder,
-})
+const imageObjectBuilder = new BuildImageObject({ basePath: "self_portraits" })
+const cData = [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+  "6.jpg",
+  "7.jpg",
+  "8.jpg",
+].map(imgName =>
+  imageObjectBuilder.buildImage({
+    imgName,
+  })
+)
+
 const [first, ...rest] = cData
 const carouselData = [
   first,
@@ -28,13 +35,14 @@ const carouselData = [
   },
   ...rest,
 ]
+
 export default () => {
   setNavItem(PageTitles.SelfPortraits)
   return (
     <Layout>
       <SEO title="Self Portraits" />
       <div className="flex mt-12">
-        <div className="flex-grow w-full">
+        <div className="flex-grow w-full mt-24">
           <ContentCarousel carouselData={carouselData} />
         </div>
       </div>

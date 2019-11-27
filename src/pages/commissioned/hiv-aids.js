@@ -7,7 +7,7 @@ import SideNav from "../../components/sidenav"
 import ContentCarousel from "../../components/carousel"
 
 const imageObjectBuilder = new BuildImageObject({
-  basePath: "5. HIV_AIDS",
+  basePath: "hiv_aids",
 })
 
 const carouselData = [

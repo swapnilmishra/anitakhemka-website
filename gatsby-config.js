@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `anita-khemka-website`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,

@@ -27,7 +27,7 @@ const IndexPage = () => {
   setNavItem(PageTitles.About)
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title={PageTitles.About} />
       <h2 className="uppercase text-center text-gray-600 tracking-wide text-sm font-semibold mt-12">
         Professional experience
       </h2>

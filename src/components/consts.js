@@ -1,4 +1,5 @@
 export const PageTitles = {
+  Home: "Home",
   Laxmi: "Laxmi",
   Kashmir: "Kashmir",
   SelfPortraits: "Self Portraits",

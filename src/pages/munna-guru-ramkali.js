@@ -37,7 +37,7 @@ export default () => {
   setNavItem(PageTitles.Munna)
   return (
     <Layout>
-      <SEO title="Munnu Guru and Ramkali" />
+      <SEO title={PageTitles.Munna} />
       <div className="flex mt-12">
         <div className="flex-grow w-full">
           <ContentCarousel carouselData={carouselData} />

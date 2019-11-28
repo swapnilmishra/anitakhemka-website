@@ -5,7 +5,9 @@ import ContentCarousel from "../components/carousel"
 import { BuildImageObject, setNavItem } from "../components/utils"
 import { PageTitles } from "../components/consts"
 
-const imageObjectBuilder = new BuildImageObject({ basePath: "self_portraits" })
+const imageObjectBuilder = new BuildImageObject({
+  basePath: "self_portraits",
+})
 const cData = [
   "1.jpg",
   "2.jpg",
@@ -40,7 +42,7 @@ export default () => {
   setNavItem(PageTitles.SelfPortraits)
   return (
     <Layout>
-      <SEO title="Self Portraits" />
+      <SEO title={PageTitles.SelfPortraits} />
       <div className="flex mt-12">
         <div className="flex-grow w-full mt-24">
           <ContentCarousel carouselData={carouselData} />

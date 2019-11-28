@@ -12,7 +12,7 @@ const menuItems = [
   // { url: "/kashmir", title: PageTitles.Kashmir },
   { url: "/laxmi-2003", title: PageTitles.Laxmi },
   { url: "/self-portraits", title: PageTitles.SelfPortraits },
-  { url: "/", title: PageTitles.BeingAnita },
+  { url: "/being-anita", title: PageTitles.BeingAnita },
   { url: "/munna-guru-ramkali", title: PageTitles.Munna },
   { url: "/commissioned/jcb", title: PageTitles.Commissioned },
   // { url: "/about", title: PageTitles.About },

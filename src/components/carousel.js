@@ -6,7 +6,7 @@ const Arrow = ({ innerText }) => {
   return <button className="text-gray-500 p-2 text-lg">{innerText}</button>
 }
 
-const ContentCarousel = ({ carouselData }) => {
+const ContentCarousel = ({ carouselData, ...restProps }) => {
   return (
     <div>
       <Carousel
@@ -15,6 +15,7 @@ const ContentCarousel = ({ carouselData }) => {
         arrowRight={<Arrow innerText=">" />}
         addArrowClickHandler
         draggable={false}
+        {...restProps}
       >
         {carouselData.map((carouselItem, idx) => {
           let render = null

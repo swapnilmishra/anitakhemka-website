@@ -7,7 +7,7 @@ import { BuildImageObject } from "../components/utils"
 import "../components/override.css"
 
 const imageObjectBuilder = new BuildImageObject({
-  basePath: "Anita Khemka_Portfolio Submission-20191119T154141Z-001",
+  basePath: "portfolio_submission",
 })
 
 const carouselData = [

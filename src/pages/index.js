@@ -35,7 +35,7 @@ export default () => {
         <div className="flex-grow w-full">
           <ContentCarousel
             carouselData={carouselData}
-            autoPlay={3000}
+            autoPlay={5000}
             animationSpeed={1000}
             infinite
           />

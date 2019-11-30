@@ -16,6 +16,8 @@ const Footer = () => (
         <a
           className="ml-6"
           href="http://www.photoink.net/artist/index/artist_id/109"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Gallery representation PHOTOINK
         </a>

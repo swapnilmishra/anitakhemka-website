@@ -1,27 +1,28 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const ListItem = ({ title, url, selected = false }) => {
   const selectedClassName = selected ? "font-semibold" : ""
   return (
     <li className="mt-3">
-      <a
+      <Link
         className={`text-gray-600 text-xs hover:underline tracking-wider ${selectedClassName}`}
-        href={url}
+        to={url}
       >
         {title}
-      </a>
+      </Link>
     </li>
   )
 }
 
-const SideNav = ({ sidenavItems, backBtn = false }) => {
+const SideNav = ({ sidenavItems, backBtn = false, backBtnUrl = "/" }) => {
   return (
     <ul className="list-none">
       {backBtn && (
         <li>
           <button
             className="text-gray-600 text-xs hover:underline tracking-wider cursor-pointer"
-            onClick={() => window.history.back()}
+            onClick={() => (window.location.href = backBtnUrl)}
           >
             {"< back"}
           </button>

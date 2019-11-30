@@ -1,11 +1,12 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const MenuItem = ({ selected = false, title, url }) => {
   const selectedItemCls = selected ? "border-b-4 border-gray-400" : ""
   return (
-    <a className={`${selectedItemCls} nav-item-text`} href={url}>
+    <Link className={`${selectedItemCls} nav-item-text`} to={url}>
       {title}
-    </a>
+    </Link>
   )
 }
 

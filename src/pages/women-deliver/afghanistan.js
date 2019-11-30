@@ -10,7 +10,7 @@ const imageObjectBuilder = new BuildImageObject({
   basePath: "women_deliver/afghanistan",
 })
 
-const carouselData = [
+const [first, ...rest] = [
   "1.JPG",
   "2.JPG",
   "2a.JPG",
@@ -37,6 +37,27 @@ const carouselData = [
     imgName,
   })
 )
+
+const carouselData = [
+  first,
+  {
+    text: `
+    <p class="text-content">
+    Maternal health is one of the key issues in developing and underdeveloped countries
+    around the world. Countries from the Indian sub-continent feature very poorly in
+    global ratings on maternal health. In 2007, I was commissioned by UNICEF to
+    document their programs and the challenges faced by women in this region. I
+    travelled to Badakshan in Afghanistan, Phidim in Nepal, Karachi in Pakistan and
+    across India. This work is a result of my travels over 3 months across these areas.
+    The scope of this program allowed me to photograph both, the interventions by the
+    local government agencies partnered with UNICEF as well as the challenges faced
+    due to the thin spread of the health facilities across difficult terrain and the socio-
+    cultural factors in each region.
+    </p>
+  `,
+  },
+  ...rest,
+]
 
 export default () => {
   setNavItem(PageTitles.Commissioned)

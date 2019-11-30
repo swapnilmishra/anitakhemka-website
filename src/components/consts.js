@@ -16,7 +16,7 @@ export const sidenavItemsCommissioned = selectIndex => {
     { url: "/commissioned/jcb", title: "JCB Portraits" },
     {
       url: "/women-deliver/afghanistan",
-      title: "Women Deliver",
+      title: "Women deliver And How",
     },
     { url: "/commissioned/hiv-aids", title: "HIV/AIDS" },
     { url: "/commissioned/blind-boys", title: "Blind Boys Academy" },

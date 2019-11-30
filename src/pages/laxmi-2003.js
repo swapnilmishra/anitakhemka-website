@@ -76,6 +76,7 @@ const carouselData = [
   first,
   {
     text: `
+    <p class="text-content">
     In 2003, I worked with Thomas Wartmann, a German filmmaker on his
 documentary film, ‘Between the Lines - India’s Third Gender’. The film
 focused on 3 eunuchs through the lens and narration of a
@@ -113,7 +114,7 @@ movement.
 Laxmi is a mixture of profound warmth, intelligence, ambiguity and
 tempestuous emotions. I spend time with her and hence I photograph
 her.
-    
+  </p>
     `,
   },
   ...rest,

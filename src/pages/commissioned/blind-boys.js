@@ -10,7 +10,7 @@ const imageObjectBuilder = new BuildImageObject({
   basePath: "blind_boys",
 })
 
-const carouselData = [
+const [first, ...rest] = [
   "1.JPG",
   "2.JPG",
   "3.JPG",
@@ -45,6 +45,18 @@ const carouselData = [
     imgName,
   })
 )
+
+const carouselData = [
+  first,
+  {
+    text: `
+  <p class="text-content">
+  An afternoon spent at the Blind School Academy in West Bengal in the autumn of
+  2009 for UNICEF.
+  </p>`,
+  },
+  ...rest,
+]
 
 export default () => {
   setNavItem(PageTitles.Commissioned)

@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 
-const Layout = ({ children, rootClass }) => {
+const Layout = ({ children, rootClass = "" }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -23,8 +23,10 @@ const Layout = ({ children, rootClass }) => {
     }
   `)
 
+  const classnames = `mx-auto container-max-width ${rootClass}`.trim()
+
   return (
-    <div className={`mx-auto container-max-width ${rootClass}`}>
+    <div className={classnames}>
       <div className="main-content">
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>

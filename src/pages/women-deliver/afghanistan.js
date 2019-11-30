@@ -66,7 +66,11 @@ export default () => {
       <SEO title={PageTitles.Commissioned} />
       <div className="flex mt-12">
         <div className="w-2/12">
-          <SideNav sidenavItems={sidenavItemsWomenDeliver(0)} backBtn />
+          <SideNav
+            sidenavItems={sidenavItemsWomenDeliver(0)}
+            backBtn
+            backBtnUrl="/commissioned/jcb"
+          />
         </div>
         <div className="flex-grow w-10/12">
           <ContentCarousel carouselData={carouselData} />

@@ -20,12 +20,12 @@ const SideNav = ({ sidenavItems, backBtn = false, backBtnUrl = "/" }) => {
     <ul className="list-none">
       {backBtn && (
         <li>
-          <button
+          <Link
             className="text-gray-600 text-xs hover:underline tracking-wider cursor-pointer"
-            onClick={() => (window.location.href = backBtnUrl)}
+            to={backBtnUrl}
           >
             {"< back"}
-          </button>
+          </Link>
         </li>
       )}
       {sidenavItems.map(navItem => (

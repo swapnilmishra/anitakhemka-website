@@ -38,6 +38,7 @@ export default () => {
             autoPlay={5000}
             animationSpeed={1000}
             infinite
+            stopAutoPlayOnHover
           />
         </div>
       </div>

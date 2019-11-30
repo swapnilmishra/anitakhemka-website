@@ -10,6 +10,14 @@ const imageObjectBuilder = new BuildImageObject({
 })
 const carouselData = [
   "1 copy.jpg",
+  "2 copy.jpg",
+  "3 copy.jpg",
+  "4 copy.jpg",
+  "5 copy.jpg",
+  "6 copy.jpg",
+  "7 copy.jpg",
+  "8 copy.jpg",
+  "9 copy.jpg",
   "10 copy.jpg",
   "11 copy.jpg",
   "12 copy.jpg",
@@ -19,14 +27,6 @@ const carouselData = [
   "16 copy.jpg",
   "18 copy.jpg",
   "19 copy.jpg",
-  "2 copy.jpg",
-  "3 copy.jpg",
-  "4 copy.jpg",
-  "5 copy.jpg",
-  "6 copy.jpg",
-  "7 copy.jpg",
-  "8 copy.jpg",
-  "9 copy.jpg",
 ].map(imgName =>
   imageObjectBuilder.buildImage({
     imgName,

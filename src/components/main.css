@@ -40,3 +40,23 @@ body {
 .nav-item-text {
   font-size: 13px;
 }
+/*
+styles for about/bio page
+*/
+
+.border-right-custom-blue {
+  border-right: 2px solid #4dd0e1;
+}
+
+.color-custom-blue {
+  color: #4dd0e1;
+}
+
+/* 
+.BrainhubCarouselItem {
+  visibility: hidden;
+}
+
+.BrainhubCarouselItem--active {
+  visibility: visible;
+} */

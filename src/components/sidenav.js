@@ -28,8 +28,8 @@ const SideNav = ({ sidenavItems, backBtn = false, backBtnUrl = "/" }) => {
           </Link>
         </li>
       )}
-      {sidenavItems.map(navItem => (
-        <ListItem {...navItem} />
+      {sidenavItems.map((navItem, idx) => (
+        <ListItem {...navItem} key={idx} />
       ))}
     </ul>
   )

@@ -15,13 +15,13 @@ const menuItems = [
   { url: "/being-anita", title: PageTitles.BeingAnita },
   { url: "/munna-guru-ramkali", title: PageTitles.Munna },
   { url: "/commissioned/jcb", title: PageTitles.Commissioned },
-  // { url: "/about", title: PageTitles.About },
+  { url: "/about/bio", title: PageTitles.About },
 ]
 
 const Header = ({ siteTitle }) => {
   return (
     <header>
-      <h1 className="text-2xl font-thin mt-2 tracking-wide text-center text-gray-700 uppercase">
+      <h1 className="text-2xl font-thin mt-2 tracking-wide text-center text-gray-700 uppercase color-custom-blue">
         <Link to="/">{siteTitle}</Link>
       </h1>
       <TopNav menuItems={menuItems} selectedItem={getCurrentNavItem()} />

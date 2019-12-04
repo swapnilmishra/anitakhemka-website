@@ -21,7 +21,7 @@ const menuItems = [
 const Header = ({ siteTitle }) => {
   return (
     <header>
-      <h1 className="text-2xl font-thin mt-2 tracking-wide text-center text-gray-700 uppercase">
+      <h1 className="text-2xl font-thin mt-2 tracking-wide text-center text-gray-700 uppercase color-custom-blue">
         <Link to="/">{siteTitle}</Link>
       </h1>
       <TopNav menuItems={menuItems} selectedItem={getCurrentNavItem()} />

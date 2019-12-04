@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { setNavItem, BuildImageObject } from "../../components/utils"
@@ -14,7 +14,16 @@ const bioImgURL = imageObjectBuilder.buildImage({
 })
 
 const IndexPage = () => {
+  const containerRef = useRef(null)
+  const textElementRef = useRef(null)
+
   setNavItem(PageTitles.About)
+
+  useEffect(() => {
+    const h = `${containerRef.current.getBoundingClientRect().height / 2}px`
+    textElementRef.current.style.height = h
+  })
+
   return (
     <Layout>
       <SEO title={PageTitles.About} />
@@ -22,11 +31,18 @@ const IndexPage = () => {
         <div className="w-2/12">
           <SideNav sidenavItems={sidenavItemsAbout(0)} />
         </div>
-        <div className="w-10/12">
-          <figure className="w-1/2 float-left mr-4">
-            <img src={bioImgURL.img.src} alt={bioImgURL.img.src} />
-          </figure>
-          <p className="text-sm">
+        <div className="flex w-10/12 h-full" ref={containerRef}>
+          <div className="w-1/2">
+            <img
+              src={bioImgURL.img.src}
+              alt={bioImgURL.img.src}
+              className="border-right-custom-blue"
+            />
+          </div>
+          <p
+            ref={textElementRef}
+            className="text-sm w-1/2 pl-4 pr-4 pt-2 overflow-scroll bg-gray-400"
+          >
             An English literature graduate, Anita Khemka (b. 1972) began
             photographing in 1996. Her oeuvre has largely been defined by social
             documentary work and has been widely exhibited in India and traveled

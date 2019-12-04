@@ -20,7 +20,7 @@ const IndexPage = () => {
   setNavItem(PageTitles.About)
 
   useEffect(() => {
-    const h = `${containerRef.current.getBoundingClientRect().height / 2}px`
+    const h = `${containerRef.current.getBoundingClientRect().width / 2}px`
     textElementRef.current.style.height = h
   })
 

@@ -20,7 +20,9 @@ const IndexPage = () => {
   setNavItem(PageTitles.About)
 
   useEffect(() => {
-    const h = `${containerRef.current.getBoundingClientRect().width / 2 - 2}px`
+    const h = `${Math.round(
+      containerRef.current.getBoundingClientRect().width / 2 - 4
+    )}px`
     textElementRef.current.style.height = h
   })
 
@@ -31,7 +33,7 @@ const IndexPage = () => {
         <div className="w-2/12">
           <SideNav sidenavItems={sidenavItemsAbout(0)} />
         </div>
-        <div className="flex w-10/12 h-full" ref={containerRef}>
+        <div className="flex w-10/12 h-full mt-20" ref={containerRef}>
           <div className="w-1/2">
             <img
               src={bioImgURL.img.src}
@@ -41,7 +43,7 @@ const IndexPage = () => {
           </div>
           <p
             ref={textElementRef}
-            className="text-sm w-1/2 pl-4 pr-4 pt-2 overflow-scroll bg-gray-400"
+            className="text-sm w-1/2 pl-4 pr-4 pt-2 overflow-scroll bg-gray-300"
           >
             An English literature graduate, Anita Khemka (b. 1972) began
             photographing in 1996. Her oeuvre has largely been defined by social

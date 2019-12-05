@@ -15,11 +15,11 @@ const IndexPage = () => {
         <div className="w-2/12">
           <SideNav sidenavItems={sidenavItemsAbout(2)} />
         </div>
-        <div className="w-10/12 h-full text-sm">
+        <div className="w-10/12 h-full">
           <div>
             <p className="font-semibold">Anita Khemka</p>
             <a href="mailto:contact@anitakhemka.com">
-              <span className="text-sm">✉ </span>
+              <span>✉ </span>
               <span>contact@anitakhemka.com</span>
             </a>
           </div>
@@ -29,7 +29,7 @@ const IndexPage = () => {
               <a href="http://www.photoink.net">http://www.photoink.net</a>
             </p>
             <a href="mailto:info@photoink.net">
-              <span className="text-sm">✉ </span>
+              <span>✉ </span>
               <span>info@photoink.net</span>
             </a>
           </div>

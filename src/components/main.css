@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply pl-4 pr-4 text-gray-900;
+  @apply pl-4 pr-4 text-gray-900 text-xs;
   font-family: "Raleway", sans-serif;
   background-color: #eee;
 }

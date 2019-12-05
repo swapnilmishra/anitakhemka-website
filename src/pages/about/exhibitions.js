@@ -6,7 +6,7 @@ import { PageTitles, sidenavItemsAbout } from "../../components/consts"
 import SideNav from "../../components/sidenav"
 
 const DateSection = ({ children }) => (
-  <span class="inline-block font-medium text-gray-900 mr-2 text-sm">
+  <span class="inline-block font-medium text-gray-900 mr-2">
     {children}
   </span>
 )
@@ -24,7 +24,7 @@ const IndexPage = () => {
         <div className="w-2/12">
           <SideNav sidenavItems={sidenavItemsAbout(1)} />
         </div>
-        <div className="w-10/12 text-sm text-gray-900 tracking-wider">
+        <div className="w-10/12 text-gray-900 tracking-wider">
           <div className="flex mt-2">
             <div className="w-1/12">
               <DateSection>2018</DateSection>

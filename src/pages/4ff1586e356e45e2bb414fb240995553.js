@@ -122,7 +122,7 @@ export default () => {
           download
         >
           <span
-            className="text-xs align-text-top"
+            className="align-text-top"
             role="img"
             aria-label="download"
           >

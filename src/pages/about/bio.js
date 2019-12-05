@@ -43,7 +43,7 @@ const IndexPage = () => {
           </div>
           <p
             ref={textElementRef}
-            className="text-sm w-1/2 pl-4 pr-4 pt-2 overflow-scroll bg-gray-300"
+            className="w-1/2 pl-4 pr-4 pt-2 overflow-scroll bg-gray-300"
           >
             An English literature graduate, Anita Khemka (b. 1972) began
             photographing in 1996. Her oeuvre has largely been defined by social

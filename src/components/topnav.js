@@ -12,7 +12,7 @@ const MenuItem = ({ selected = false, title, url }) => {
 
 const TopNav = ({ menuItems, selectedItem }) => {
   return (
-    <div className="flex flex-wrap text-center justify-between text-xs tracking-wider text-gray-600 mt-6">
+    <div className="flex flex-wrap text-center justify-between tracking-wider text-gray-600 mt-6">
       {menuItems.map(menuItem => {
         let selected = menuItem.title === selectedItem
         return (

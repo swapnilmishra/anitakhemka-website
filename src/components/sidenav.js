@@ -8,7 +8,7 @@ const ListItem = ({ title, url, selected = false }) => {
   return (
     <li className="side-nav-item">
       <Link
-        className={`text-gray-600 text-xs tracking-wider ${selectedClassName}`}
+        className={`text-gray-600 tracking-wider ${selectedClassName}`}
         to={url}
       >
         {title}
@@ -23,7 +23,7 @@ const SideNav = ({ sidenavItems, backBtn = false, backBtnUrl = "/" }) => {
       {backBtn && (
         <li>
           <Link
-            className="text-gray-600 text-xs hover:underline tracking-wider cursor-pointer"
+            className="text-gray-600 hover:underline tracking-wider cursor-pointer"
             to={backBtnUrl}
           >
             {"< back"}

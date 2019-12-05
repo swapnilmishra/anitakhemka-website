@@ -2,11 +2,13 @@ import React from "react"
 import { Link } from "gatsby"
 
 const ListItem = ({ title, url, selected = false }) => {
-  const selectedClassName = selected ? "font-semibold" : ""
+  const selectedClassName = selected
+    ? "font-semibold border-b-2 border-gray-400"
+    : ""
   return (
     <li className="side-nav-item">
       <Link
-        className={`text-gray-600 text-xs hover:underline tracking-wider ${selectedClassName}`}
+        className={`text-gray-600 text-xs tracking-wider ${selectedClassName}`}
         to={url}
       >
         {title}

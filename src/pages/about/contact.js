@@ -15,7 +15,7 @@ const IndexPage = () => {
         <div className="w-2/12">
           <SideNav sidenavItems={sidenavItemsAbout(2)} />
         </div>
-        <div className="w-10/12 h-full text-sm mt-1">
+        <div className="w-10/12 h-full text-sm">
           <div>
             <p className="font-semibold">Anita Khemka</p>
             <a href="mailto:contact@anitakhemka.com">

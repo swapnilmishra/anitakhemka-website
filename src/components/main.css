@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply pl-4 pr-4;
+  @apply pl-4 pr-4 text-gray-900;
   font-family: "Raleway", sans-serif;
   background-color: #eee;
 }
@@ -39,6 +39,10 @@ body {
 
 .nav-item-text {
   font-size: 13px;
+}
+
+.side-nav-item:not(:first-child) {
+  @apply mt-3;
 }
 /*
 styles for about/bio page

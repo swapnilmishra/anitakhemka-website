@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 const ListItem = ({ title, url, selected = false }) => {
   const selectedClassName = selected ? "font-semibold" : ""
   return (
-    <li className="mt-3">
+    <li className="side-nav-item">
       <Link
         className={`text-gray-600 text-xs hover:underline tracking-wider ${selectedClassName}`}
         to={url}

@@ -46,8 +46,8 @@ export const sidenavItemsWomenDeliver = selectIndex => {
 export const sidenavItemsAbout = selectIndex => {
   let items = [
     { url: "/about/bio", title: "Biography" },
-    { url: "/about/bio", title: "Exhibitions" },
-    { url: "/about/bio", title: "Contact" },
+    { url: "/about/exhibitions", title: "Exhibitions" },
+    { url: "/about/contact", title: "Contact" },
   ]
   if (typeof selectIndex !== "undefined") {
     items[selectIndex].selected = true

@@ -5,6 +5,7 @@ import { setNavItem, BuildImageObject } from "../../components/utils"
 import { PageTitles, sidenavItemsCommissioned } from "../../components/consts"
 import SideNav from "../../components/sidenav"
 import ContentCarousel from "../../components/carousel"
+import { Box, VerticalBox } from "../../components/box"
 
 const imageObjectBuilder = new BuildImageObject({
   basePath: "blind_boys",
@@ -63,13 +64,13 @@ export default () => {
   return (
     <Layout>
       <SEO title={PageTitles.Commissioned} />
-      <div className="flex mt-12">
-        <div className="w-2/12">
+      <div className="flex">
+        <Box className="w-2/12">
           <SideNav sidenavItems={sidenavItemsCommissioned(3)} />
-        </div>
-        <div className="flex-grow w-10/12">
+        </Box>
+        <VerticalBox className="w-10/12">
           <ContentCarousel carouselData={carouselData} />
-        </div>
+        </VerticalBox>
       </div>
     </Layout>
   )

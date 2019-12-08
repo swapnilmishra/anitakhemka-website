@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import ContentCarousel from "../components/carousel"
 import { BuildImageObject, setNavItem } from "../components/utils"
 import { PageTitles } from "../components/consts"
+import { Box } from "../components/box"
 
 const imageObjectBuilder = new BuildImageObject({ basePath: "landing_page" })
 
@@ -31,8 +32,8 @@ export default () => {
   return (
     <Layout>
       <SEO title={PageTitles.Home} />
-      <div className="flex mt-12 justify-center">
-        <div className="flex-grow w-full">
+      <div className="flex justify-center">
+        <Box className="w-full">
           <ContentCarousel
             carouselData={carouselData}
             autoPlay={5000}
@@ -40,7 +41,7 @@ export default () => {
             infinite
             stopAutoPlayOnHover
           />
-        </div>
+        </Box>
       </div>
     </Layout>
   )

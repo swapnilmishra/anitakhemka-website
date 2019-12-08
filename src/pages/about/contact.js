@@ -4,6 +4,7 @@ import SEO from "../../components/seo"
 import { setNavItem } from "../../components/utils"
 import { PageTitles, sidenavItemsAbout } from "../../components/consts"
 import SideNav from "../../components/sidenav"
+import { Box } from "../../components/box"
 
 const IndexPage = () => {
   setNavItem(PageTitles.About)
@@ -11,11 +12,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title={PageTitles.About} />
-      <div className="flex mt-12">
-        <div className="w-2/12">
+      <div className="flex">
+        <Box className="w-2/12">
           <SideNav sidenavItems={sidenavItemsAbout(2)} />
-        </div>
-        <div className="w-10/12 h-full">
+        </Box>
+        <Box className="w-10/12 h-full">
           <div>
             <p className="font-semibold">Anita Khemka</p>
             <a href="mailto:contact@anitakhemka.com">
@@ -33,7 +34,7 @@ const IndexPage = () => {
               <span>info@photoink.net</span>
             </a>
           </div>
-        </div>
+        </Box>
       </div>
     </Layout>
   )

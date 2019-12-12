@@ -16,6 +16,14 @@ body {
   max-height: calc(100vh - 220px);
 }
 
+.carousel-image:hover {
+  cursor: pointer;
+}
+
+.full-page-carousel-image {
+  max-height: 100vh;
+}
+
 .text-content {
   max-height: calc(100vh - 250px);
   overflow: scroll;
@@ -54,6 +62,13 @@ styles for about/bio page
 
 .color-custom-blue {
   color: #4dd0e1;
+}
+
+.full-page-carousel-back-btn {
+  @apply text-white uppercase fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
 }
 
 /* 

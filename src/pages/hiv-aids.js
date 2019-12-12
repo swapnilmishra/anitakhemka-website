@@ -1,4 +1,3 @@
-export default () => {
-  window.location.href = "/commissioned/hiv-aids"
-  return null
-}
+import Page from "./commissioned/hiv-aids"
+
+export default Page

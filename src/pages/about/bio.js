@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef } from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { setNavItem, BuildImageObject } from "../../components/utils"
@@ -10,7 +10,7 @@ const imageObjectBuilder = new BuildImageObject({
 })
 
 const bioImgURL = imageObjectBuilder.buildImage({
-  imgName: "bio-pic.jpg",
+  imgName: "bio-pic-2.jpg",
 })
 
 const IndexPage = () => {
@@ -19,13 +19,6 @@ const IndexPage = () => {
 
   setNavItem(PageTitles.About)
 
-  useEffect(() => {
-    const h = `${Math.round(
-      containerRef.current.getBoundingClientRect().width / 2 - 4
-    )}px`
-    textElementRef.current.style.height = h
-  })
-
   return (
     <Layout>
       <SEO title={PageTitles.About} />
@@ -33,9 +26,16 @@ const IndexPage = () => {
         <div className="w-2/12">
           <SideNav sidenavItems={sidenavItemsAbout(0)} />
         </div>
-        <div className="flex w-10/12 h-full mt-20" ref={containerRef}>
+        <div className="flex w-10/12 h-full mt-16">
           <div className="w-1/2">
             <img
+              onLoad={() => {
+                const h = `${Math.round(
+                  containerRef.current.getBoundingClientRect().height
+                )}px`
+                textElementRef.current.style.height = h
+              }}
+              ref={containerRef}
               src={bioImgURL.img.src}
               alt={bioImgURL.img.src}
               className="border-right-custom-blue"
@@ -44,6 +44,7 @@ const IndexPage = () => {
           <p
             ref={textElementRef}
             className="w-1/2 pl-4 pr-4 pt-2 overflow-scroll bg-gray-300"
+            style={{ boxSizing: "border-box" }}
           >
             An English literature graduate, Anita Khemka (b. 1972) began
             photographing in 1996. Her oeuvre has largely been defined by social

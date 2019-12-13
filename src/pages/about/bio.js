@@ -31,6 +31,7 @@ const IndexPage = () => {
               alt={bioImgURL.img.src}
               className="border-right-custom-blue"
             />
+            <p>Ambrotype by Imran Kokiloo</p>
           </div>
           <p
             className="w-1/2 pl-4 pr-4 pt-2 overflow-scroll bg-gray-300"

@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { setNavItem, BuildImageObject } from "../../components/utils"
@@ -14,9 +14,6 @@ const bioImgURL = imageObjectBuilder.buildImage({
 })
 
 const IndexPage = () => {
-  const containerRef = useRef(null)
-  const textElementRef = useRef(null)
-
   setNavItem(PageTitles.About)
 
   return (
@@ -29,22 +26,15 @@ const IndexPage = () => {
         <div className="flex w-10/12 h-full mt-16">
           <div className="w-1/2">
             <img
-              onLoad={() => {
-                const h = `${Math.round(
-                  containerRef.current.getBoundingClientRect().height
-                )}px`
-                textElementRef.current.style.height = h
-              }}
-              ref={containerRef}
+              style={{ height: 492 }}
               src={bioImgURL.img.src}
               alt={bioImgURL.img.src}
               className="border-right-custom-blue"
             />
           </div>
           <p
-            ref={textElementRef}
             className="w-1/2 pl-4 pr-4 pt-2 overflow-scroll bg-gray-300"
-            style={{ boxSizing: "border-box" }}
+            style={{ boxSizing: "border-box", height: 492 }}
           >
             An English literature graduate, Anita Khemka (b. 1972) began
             photographing in 1996. Her oeuvre has largely been defined by social

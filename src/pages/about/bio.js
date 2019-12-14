@@ -24,7 +24,7 @@ const IndexPage = () => {
         <Box className="w-2/12">
           <SideNav sidenavItems={sidenavItemsAbout(0)} />
         </Box>
-        <Box className="w-10/12 mt-32">
+        <Box className="w-10/12 mt-24">
           <div className="flex">
             <div className="w-1/2">
               <img

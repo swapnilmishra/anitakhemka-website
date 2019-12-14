@@ -5,6 +5,7 @@ import ContentCarousel from "../components/carousel"
 import { BuildImageObject, setNavItem } from "../components/utils"
 import { PageTitles } from "../components/consts"
 import SideNav from "../components/sidenav"
+import { Box, VerticalBox } from "../components/box"
 
 const imageObjectBuilder = new BuildImageObject({ basePath: "laxmi_2013_19" })
 const carouselData = [
@@ -60,13 +61,13 @@ export default () => {
   return (
     <Layout>
       <SEO title={PageTitles.Laxmi} />
-      <div className="flex mt-12">
-        <div className="w-1/12">
+      <div className="flex">
+        <Box className="w-1/12">
           <SideNav sidenavItems={sidenavItems} />
-        </div>
-        <div className="flex-grow w-11/12">
+        </Box>
+        <VerticalBox className="w-11/12">
           <ContentCarousel carouselData={carouselData} />
-        </div>
+        </VerticalBox>
       </div>
     </Layout>
   )

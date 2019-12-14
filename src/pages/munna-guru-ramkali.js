@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import ContentCarousel from "../components/carousel"
 import { BuildImageObject, setNavItem } from "../components/utils"
 import { PageTitles } from "../components/consts"
+import { VerticalBox } from "../components/box"
 
 const imageObjectBuilder = new BuildImageObject({
   basePath: "munna_guru_ramkali",
@@ -79,10 +80,10 @@ export default () => {
   return (
     <Layout>
       <SEO title={PageTitles.Munna} />
-      <div className="flex mt-12">
-        <div className="flex-grow w-full">
+      <div className="flex">
+        <VerticalBox className="w-full">
           <ContentCarousel carouselData={carouselData} />
-        </div>
+        </VerticalBox>
       </div>
     </Layout>
   )

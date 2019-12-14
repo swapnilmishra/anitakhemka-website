@@ -9,9 +9,6 @@ export default () => {
   return (
     <Layout>
       <SEO title={PageTitles.Kashmir} />
-      <div className="flex mt-12">
-        <div className="flex-grow w-full"></div>
-      </div>
     </Layout>
   )
 }

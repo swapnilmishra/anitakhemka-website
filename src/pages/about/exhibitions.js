@@ -4,23 +4,19 @@ import SEO from "../../components/seo"
 import { setNavItem } from "../../components/utils"
 import { PageTitles, sidenavItemsAbout } from "../../components/consts"
 import SideNav from "../../components/sidenav"
+import { Box } from "../../components/box"
 
 const DateSection = ({ children }) => (
-  <span class="inline-block font-medium text-gray-900 mr-2">
-    {children}
-  </span>
+  <span class="inline-block font-medium text-gray-900 mr-2">{children}</span>
 )
 const Content = ({ children }) => <p className="mb-2">{children}</p>
-const Container = ({ children }) => {
-  return <div className={`flex mt-12`}>{children}</div>
-}
 
 const IndexPage = () => {
   setNavItem(PageTitles.About)
   return (
     <Layout>
       <SEO title={PageTitles.About} />
-      <Container>
+      <Box className="flex">
         <div className="w-2/12">
           <SideNav sidenavItems={sidenavItemsAbout(1)} />
         </div>
@@ -285,7 +281,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-      </Container>
+      </Box>
     </Layout>
   )
 }

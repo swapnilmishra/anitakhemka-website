@@ -3,7 +3,7 @@ import Carousel from "@brainhubeu/react-carousel"
 import "@brainhubeu/react-carousel/lib/style.css"
 
 const Arrow = ({ innerText }) => {
-  return <button className="text-gray-500 p-2 text-lg">{innerText}</button>
+  return <button className="text-gray-500 p-2 text-3xl">{innerText}</button>
 }
 
 const ContentCarousel = ({ carouselData, ...restProps }) => {

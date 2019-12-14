@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { setNavItem, BuildImageObject } from "../../components/utils"
@@ -11,21 +11,11 @@ const imageObjectBuilder = new BuildImageObject({
 })
 
 const bioImgURL = imageObjectBuilder.buildImage({
-  imgName: "bio-pic.jpg",
+  imgName: "bio-pic-2.jpg",
 })
 
 const IndexPage = () => {
-  const containerRef = useRef(null)
-  const textElementRef = useRef(null)
-
   setNavItem(PageTitles.About)
-
-  useEffect(() => {
-    const h = `${Math.round(
-      containerRef.current.getBoundingClientRect().width / 2 - 4
-    )}px`
-    textElementRef.current.style.height = h
-  })
 
   return (
     <Layout>
@@ -35,17 +25,19 @@ const IndexPage = () => {
           <SideNav sidenavItems={sidenavItemsAbout(0)} />
         </Box>
         <Box className="w-10/12 mt-32">
-          <div className="flex" ref={containerRef}>
+          <div className="flex">
             <div className="w-1/2">
               <img
                 src={bioImgURL.img.src}
                 alt={bioImgURL.img.src}
                 className="border-right-custom-blue"
+                style={{ height: 492 }}
               />
+              <p>Ambrotype by Imran Kokiloo</p>
             </div>
             <p
-              ref={textElementRef}
               className="w-1/2 pl-4 pr-4 pt-2 overflow-scroll bg-gray-300"
+              style={{ height: 492 }}
             >
               An English literature graduate, Anita Khemka (b. 1972) began
               photographing in 1996. Her oeuvre has largely been defined by

@@ -13,6 +13,11 @@ const imageObjectBuilder = new BuildImageObject({
 const carouselData = [
   {
     text: `<h1 class="text-2xl font-thin margin-bottom-125 tracking-wide text-center text-gray-700 uppercase">
+    Visual Portfolio Submission — Documentary Media MFA, Ryerson University
+    </h1>`,
+  },
+  {
+    text: `<h1 class="text-2xl font-thin margin-bottom-125 tracking-wide text-center text-gray-700 uppercase">
     I Hope They Serve Beer in Hell — a lost childhood
     </h1>`,
   },
@@ -121,11 +126,7 @@ export default () => {
           href="/Anita Khemka_Portfolio Submission-20191119T154141Z-001.zip"
           download
         >
-          <span
-            className="align-text-top"
-            role="img"
-            aria-label="download"
-          >
+          <span className="align-text-top" role="img" aria-label="download">
             📥
           </span>{" "}
           Download the story as zip

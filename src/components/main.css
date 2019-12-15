@@ -24,6 +24,10 @@ body {
   max-height: 100vh;
 }
 
+.full-page-carousel-image-with-label {
+  max-height: calc(100vh - 30px);
+}
+
 .text-content {
   max-height: calc(100vh - 250px);
   overflow: scroll;

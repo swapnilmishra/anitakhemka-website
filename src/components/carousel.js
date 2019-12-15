@@ -129,7 +129,9 @@ export const FullPageCarousel = ({
             render = renderImg({
               ...carouselItem,
               key: idx,
-              className: "full-page-carousel-image",
+              className: carouselItem.img.caption
+                ? "full-page-carousel-image-with-label"
+                : "full-page-carousel-image",
               variant: "dark",
             })
           } else if (carouselItem.text) {
@@ -160,7 +162,7 @@ const DefaultCarousel = ({ carouselData }) => {
         }}
       />
       {showFull && (
-        <div className="fixed top-0 left-0 h-screen bg-black w-screen flex flex-col justify-center">
+        <div className="fixed top-0 left-0 h-screen bg-gray-800 w-screen flex flex-col justify-center">
           <button
             className="full-page-carousel-back-btn"
             onClick={() => setFull(false)}

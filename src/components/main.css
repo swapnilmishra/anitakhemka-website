@@ -30,7 +30,11 @@ body {
 }
 
 .main-content {
-  min-height: calc(100vh - 30px);
+  min-height: calc(100vh - 115px);
+}
+
+.main-content-height {
+  min-height: calc(100vh - 115px);
 }
 
 .max-width-400 {

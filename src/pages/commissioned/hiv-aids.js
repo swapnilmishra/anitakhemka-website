@@ -52,7 +52,7 @@ const carouselData = [
   first,
   {
     text: `
-  <p class="text-content">
+  <p class="text-content max-w-3xl">
   My work on HIV/AIDS (2000 – 2006) commissioned by UNAIDS and then supported by
   the Ford Foundation was the first nationwide attempt at creating such a visual archive on
   the issue and contributed hugely in reducing the stigma associated with living with

@@ -17,7 +17,7 @@ const carouselData = [
     caption: "Perumal Murugan",
   }),
   {
-    text: `<p class="max-width-500 text-content">
+    text: `<p class="max-w-3xl text-content">
     JCB Literature Prize has an annual collaboration with Vogue India to create an
     archive featuring the best of Indian writing over the years. They have conceptualized
     a special series of portraits of the shortlisted novelists by a chosen photographer for

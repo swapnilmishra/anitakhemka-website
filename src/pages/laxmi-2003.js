@@ -126,6 +126,8 @@ const sidenavItems = [
 ]
 
 export default () => {
+  // const [showFull, setFull] = useState(false)
+  // let currentImageIdx = useRef(0)
   setNavItem(PageTitles.Laxmi)
   return (
     <Layout>

@@ -43,7 +43,7 @@ const carouselData = [
   first,
   {
     text: `
-    <p class="text-content">
+    <p class="text-content max-w-3xl">
     Maternal health is one of the key issues in developing and underdeveloped countries
     around the world. Countries from the Indian sub-continent feature very poorly in
     global ratings on maternal health. In 2007, I was commissioned by UNICEF to

@@ -38,7 +38,7 @@ const carouselData = [
   first,
   {
     text: `
-  <p class="text-content">
+  <p class="text-content max-w-2xl">
   My grandmother&#39;s house was a stone&#39;s throw away from Munna Guru&#39;s house in old
   Delhi. As a child when I misbehaved, I was always threatened that I’d be sent away
   to her house. As a result, I grew up fearing Munna Guru. Her loud voice, aggressive

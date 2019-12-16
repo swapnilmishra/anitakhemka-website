@@ -162,7 +162,7 @@ const DefaultCarousel = ({ carouselData }) => {
         }}
       />
       {showFull && (
-        <div className="fixed top-0 left-0 h-screen bg-gray-800 w-screen flex flex-col justify-center">
+        <div className="fixed top-0 left-0 bg-black h-screen w-screen flex flex-col justify-center">
           <button
             className="full-page-carousel-back-btn"
             onClick={() => setFull(false)}

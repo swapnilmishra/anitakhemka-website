@@ -67,6 +67,17 @@ const renderImg = ({
   )
 }
 
+const renderVideo = ({ video: { src }, key, className = "carousel-image" }) => {
+  return (
+    <div>
+      <video controls className={`block ${className}`} key={key}>
+        <source src={src} type="video/mp4" />
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </div>
+  )
+}
+
 const PageCarousel = ({ carouselData, onImageClick, ...restProps }) => {
   const [value, setValue] = useState(0)
   return (
@@ -93,6 +104,8 @@ const PageCarousel = ({ carouselData, onImageClick, ...restProps }) => {
             })
           } else if (carouselItem.text) {
             render = renderText({ ...carouselItem, key: idx })
+          } else if (carouselItem.video) {
+            render = renderVideo({ ...carouselItem, key: idx })
           }
           return render
         })}
@@ -139,6 +152,12 @@ export const FullPageCarousel = ({
               ...carouselItem,
               key: idx,
               variant: "dark",
+            })
+          } else if (carouselItem.video) {
+            render = renderVideo({
+              ...carouselItem,
+              key: idx,
+              className: "full-page-carousel-image",
             })
           }
           return render

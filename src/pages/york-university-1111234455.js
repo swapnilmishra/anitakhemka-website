@@ -101,7 +101,7 @@ const carouselData = [
   }),
   imageObjectBuilder.buildImage({
     imgName: "11. Untitled II.jpg",
-    caption: "Untitled II",
+    caption: "Untitled",
   }),
   imageObjectBuilder.buildImage({
     imgName: "12. Court Files.jpg",

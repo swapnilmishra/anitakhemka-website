@@ -67,13 +67,19 @@ const renderImg = ({
   )
 }
 
-const renderVideo = ({ video: { src }, key, className = "carousel-image" }) => {
+const renderVideo = ({
+  video: { src, caption },
+  key,
+  className = "carousel-image",
+  variant,
+}) => {
   return (
     <div>
       <video controls className={`block ${className}`} key={key}>
         <source src={src} type="video/mp4" />
         Sorry, your browser doesn't support embedded videos.
       </video>
+      {caption && <Caption text={caption} variant={variant} />}
     </div>
   )
 }
@@ -158,6 +164,7 @@ export const FullPageCarousel = ({
               ...carouselItem,
               key: idx,
               className: "full-page-carousel-image",
+              variant: "dark",
             })
           }
           return render

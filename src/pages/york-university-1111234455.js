@@ -57,6 +57,7 @@ const carouselData = [
   {
     video: {
       src: "/portfolio_submission/Pellet Identity_last slide_final.mp4",
+      caption: "The Making and Unmaking of a Vessel",
     },
   },
   imageObjectBuilder.buildImage({
@@ -101,7 +102,7 @@ const carouselData = [
   }),
   imageObjectBuilder.buildImage({
     imgName: "11. Untitled II.jpg",
-    caption: "Untitled",
+    caption: "Democracy",
   }),
   imageObjectBuilder.buildImage({
     imgName: "12. Court Files.jpg",

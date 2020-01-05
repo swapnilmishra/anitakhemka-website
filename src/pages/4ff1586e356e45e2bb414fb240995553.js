@@ -117,6 +117,7 @@ const carouselData = [
   {
     video: {
       src: "/portfolio_submission/Pellet Identity_last slide_final.mp4",
+      caption: "The Making and Unmaking of a Vessel",
     },
   },
 ]

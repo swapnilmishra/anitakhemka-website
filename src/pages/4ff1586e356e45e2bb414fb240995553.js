@@ -114,12 +114,6 @@ const carouselData = [
     imgName: "15. School.jpg",
     caption: "School",
   }),
-  {
-    video: {
-      src: "/portfolio_submission/Pellet Identity_last slide_final.mp4",
-      caption: "The Making and Unmaking of a Vessel",
-    },
-  },
 ]
 
 export default () => {

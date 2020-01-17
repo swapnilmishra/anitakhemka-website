@@ -63,8 +63,8 @@ const carouselData = [
     caption: "Cemetery",
   }),
   imageObjectBuilder.buildImage({
-    imgName: "3 .X-Ray Portraits.jpg",
-    caption: "X-Ray Portraits",
+    imgName: "3 .X-Ray Portraits of Pellet Victims.jpg",
+    caption: "X-Ray Portraits of Pellet Victims",
   }),
   imageObjectBuilder.buildImage({
     imgName: "4. Portraits.jpg",

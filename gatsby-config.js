@@ -3,8 +3,10 @@ module.exports = {
     title: `Anita Khemka`,
     description: `Site to showcase portfolio.`,
     author: `@swapnil`,
+    siteUrl: `https://anitakhemka.com`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

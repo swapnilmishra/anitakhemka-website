@@ -13,6 +13,7 @@
     "gatsby-plugin-postcss": "^2.1.13",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sharp": "^2.2.34",
+    "gatsby-plugin-sitemap": "^2.2.26",
     "gatsby-transformer-sharp": "^2.3.1",
     "nofrills-carousel": "https://github.com/swapnilmishra/nofrills-carousel.git",
     "prop-types": "^15.7.2",

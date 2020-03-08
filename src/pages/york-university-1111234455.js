@@ -13,7 +13,7 @@ const imageObjectBuilder = new BuildImageObject({
 const carouselData = [
   {
     text: `<h1 class="text-2xl font-thin margin-bottom-125 tracking-wide text-center text-gray-700 uppercase">
-    Portfolio Submission — MFA Visual Arts, York University
+    Visual Portfolio Submission — MFA Visual Arts, York University
     </h1>`,
   },
   {

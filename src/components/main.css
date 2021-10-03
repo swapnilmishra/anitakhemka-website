@@ -14,6 +14,7 @@ body {
 
 .carousel-image {
   max-height: calc(100vh - 220px);
+  transform:translateZ(0)
 }
 
 .carousel-image:hover {

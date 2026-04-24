@@ -24,11 +24,9 @@ const carouselData = [
   ["28. IMG_3121.JPG"],
   ["29. IMG_3061.JPG"],
   ["30. IMG_3351.JPG"],
-  ["30a MG_2694.JPG"],
   ["31. IMG_3727.JPG", "At home, cooking"],
   ["32. IMG_3767.JPG"],
   ["33.JPG"],
-  ["34.JPG"],
   ["35.JPG"],
   ["36.JPG", "Recovering from her nirvan"],
   ["37.JPG"],
@@ -45,7 +43,6 @@ const carouselData = [
   ["48.IMG_2243.JPG"],
   ["49.IMG_7328.JPG"],
   ["50. IMG_7552.JPG", "Dressed as Kali"],
-  ["51. IMG_7833.JPG"],
   ["52. IMG_2443.JPG", "With Ram Madhav"],
 ].map(([imgName, caption]) =>
   imageObjectBuilder.buildImage({

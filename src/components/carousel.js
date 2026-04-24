@@ -1,9 +1,16 @@
-import React, { useState, useRef } from "react"
-import Carousel from "@brainhubeu/react-carousel"
-import "@brainhubeu/react-carousel/lib/style.css"
+import React, { useState, useRef, useCallback, useEffect } from "react"
+import useEmblaCarousel from "embla-carousel-react"
 
-const Arrow = ({ innerText }) => {
-  return <button className="text-gray-500 p-2 text-3xl">{innerText}</button>
+const Arrow = ({ innerText, onClick, disabled }) => {
+  return (
+    <button
+      className="text-gray-500 p-2 text-3xl disabled:opacity-30"
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {innerText}
+    </button>
+  )
 }
 
 const Text = ({ text, variant }) => {
@@ -85,37 +92,66 @@ const renderVideo = ({
 }
 
 const PageCarousel = ({ carouselData, onImageClick, ...restProps }) => {
-  const [value, setValue] = useState(0)
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [canScrollPrev, setCanScrollPrev] = useState(false)
+  const [canScrollNext, setCanScrollNext] = useState(false)
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+    setCanScrollPrev(emblaApi.canScrollPrev())
+    setCanScrollNext(emblaApi.canScrollNext())
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    onSelect()
+    emblaApi.on("select", onSelect)
+    emblaApi.on("reInit", onSelect)
+  }, [emblaApi, onSelect])
+
   return (
-    <div>
-      <Carousel
-        arrows
-        arrowLeft={<Arrow innerText="<" />}
-        arrowRight={<Arrow innerText=">" />}
-        addArrowClickHandler
-        draggable={false}
-        onChange={idx => setValue(idx)}
-        value={value}
-        {...restProps}
-      >
-        {carouselData.map((carouselItem, idx) => {
-          let render = null
-          if (carouselItem.img) {
-            render = renderImg({
-              ...carouselItem,
-              key: idx,
-              onClick: () => {
-                onImageClick(value)
-              },
-            })
-          } else if (carouselItem.text) {
-            render = renderText({ ...carouselItem, key: idx })
-          } else if (carouselItem.video) {
-            render = renderVideo({ ...carouselItem, key: idx })
-          }
-          return render
-        })}
-      </Carousel>
+    <div className="relative px-12">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">
+          {carouselData.map((carouselItem, idx) => {
+            let render = null
+            if (carouselItem.img) {
+              render = renderImg({
+                ...carouselItem,
+                key: idx,
+                onClick: () => {
+                  onImageClick(selectedIndex)
+                },
+              })
+            } else if (carouselItem.text) {
+              render = renderText({ ...carouselItem, key: idx })
+            } else if (carouselItem.video) {
+              render = renderVideo({ ...carouselItem, key: idx })
+            }
+            return (
+              <div key={idx} className="flex-[0_0_100%] min-w-0 flex justify-center items-center">
+                {render}
+              </div>
+            )
+          })}
+        </div>
+      </div>
+      <div className="absolute -left-2 top-1/2 -translate-y-1/2">
+        <Arrow innerText="<" onClick={scrollPrev} disabled={!canScrollPrev} />
+      </div>
+      <div className="absolute -right-2 top-1/2 -translate-y-1/2">
+        <Arrow innerText=">" onClick={scrollNext} disabled={!canScrollNext} />
+      </div>
     </div>
   )
 }
@@ -126,50 +162,79 @@ export const FullPageCarousel = ({
   initialValue = 0,
   ...restProps
 }) => {
-  const [value, setValue] = useState(initialValue)
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,
+    startIndex: initialValue,
+  })
+  const [canScrollPrev, setCanScrollPrev] = useState(false)
+  const [canScrollNext, setCanScrollNext] = useState(false)
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return
+    const index = emblaApi.selectedScrollSnap()
+    onSlideChange(index)
+    setCanScrollPrev(emblaApi.canScrollPrev())
+    setCanScrollNext(emblaApi.canScrollNext())
+  }, [emblaApi, onSlideChange])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    onSelect()
+    emblaApi.on("select", onSelect)
+    emblaApi.on("reInit", onSelect)
+  }, [emblaApi, onSelect])
+
   return (
-    <div>
-      <Carousel
-        arrows
-        arrowLeft={<Arrow innerText="<" />}
-        arrowRight={<Arrow innerText=">" />}
-        addArrowClickHandler
-        draggable={false}
-        onChange={idx => {
-          onSlideChange(idx)
-          setValue(idx)
-        }}
-        value={value}
-        {...restProps}
-      >
-        {carouselData.map((carouselItem, idx) => {
-          let render = null
-          if (carouselItem.img) {
-            render = renderImg({
-              ...carouselItem,
-              key: idx,
-              className: carouselItem.img.caption
-                ? "full-page-carousel-image-with-label"
-                : "full-page-carousel-image",
-              variant: "dark",
-            })
-          } else if (carouselItem.text) {
-            render = renderText({
-              ...carouselItem,
-              key: idx,
-              variant: "dark",
-            })
-          } else if (carouselItem.video) {
-            render = renderVideo({
-              ...carouselItem,
-              key: idx,
-              className: "full-page-carousel-image",
-              variant: "dark",
-            })
-          }
-          return render
-        })}
-      </Carousel>
+    <div className="relative px-12">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">
+          {carouselData.map((carouselItem, idx) => {
+            let render = null
+            if (carouselItem.img) {
+              render = renderImg({
+                ...carouselItem,
+                key: idx,
+                className: carouselItem.img.caption
+                  ? "full-page-carousel-image-with-label"
+                  : "full-page-carousel-image",
+                variant: "dark",
+              })
+            } else if (carouselItem.text) {
+              render = renderText({
+                ...carouselItem,
+                key: idx,
+                variant: "dark",
+              })
+            } else if (carouselItem.video) {
+              render = renderVideo({
+                ...carouselItem,
+                key: idx,
+                className: "full-page-carousel-image",
+                variant: "dark",
+              })
+            }
+            return (
+              <div key={idx} className="flex-[0_0_100%] min-w-0 flex justify-center items-center">
+                {render}
+              </div>
+            )
+          })}
+        </div>
+      </div>
+      <div className="absolute -left-2 top-1/2 -translate-y-1/2">
+        <Arrow innerText="<" onClick={scrollPrev} disabled={!canScrollPrev} />
+      </div>
+      <div className="absolute -right-2 top-1/2 -translate-y-1/2">
+        <Arrow innerText=">" onClick={scrollNext} disabled={!canScrollNext} />
+      </div>
     </div>
   )
 }

@@ -14,11 +14,12 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `anita-khemka-website`,
-        short_name: `starter`,
+        short_name: `Anita Khemka`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
+        icon: `static/icon.png`,
       },
     },
     `gatsby-plugin-postcss`,
